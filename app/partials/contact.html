@@ -1,0 +1,135 @@
+<div class="row margin_zero" id="header">
+    <nav id="nav" class="navbar navbar-inverse nav_bar">
+        <div class="container-fluid" style="  max-width: 1040px;  margin-left: auto;  margin-right: auto;">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="color: white;">Brand</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav nav_float" >
+                    <li><a href="#work" class="link"><span class="links">work</span></a></li>
+                    <li><a href="#services" class="link"><span class="links">services</span></a></li>
+                    <li><a href="#about" class="link"><span class="links">about us</span></a></li>
+                    <li><a href="#contact" class="link"><span class="links">contact us</span></a></li>
+                    <li><a href="#blog" class="link"><span class="links">blog</span></a></li>
+                    <!--<li><a href="#" class="h_button" id="button" style="margin: 0px 20px 0;">Link</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container" style="padding-top: 48px;">
+    <div class="contact-us-form-wrapper">
+        <div class="submenu-section">
+            <ul id="contact-us-menu">
+                <li data-display="contact-form">
+                    Contact US
+                </li>
+            </ul>
+        </div>
+
+        <div class="contact-form-section">
+            <form action="submit" method="post" class="contact_form">
+                <p style="margin: 0px 0px -33px;">
+                    <label id="name" name="contact_us[name]" type="text" class="contents">Name</label>
+                    <input id="contact_us_name" class="text_box" name="person[first_name]" type="text"/><br />
+
+                </p>
+                <ul class="ul-error-list name_required" style="display:none">
+                    <li>
+                        This Value is required.
+                    </li>
+                </ul>
+                <p style="margin: 0px 0px -33px;">
+                    <label id="email" name="contact_us[email]" type="text" class="contents">Email</label>
+                    <input id="contact_us_email" class="text_box" type="email" name="person[first_name]" onblur="validateEmail(this)" /><br />
+                </p>
+                <ul class="ul-error-list email_required" style="display:none;">
+                    <li>
+                        This Value is required.
+                    </li>
+                </ul>
+                <ul class="ul-error-list invalid-email" style="display: none;">
+                    <li>
+                        This value should Valid Email
+                    </li>
+                </ul>
+                <p>
+                    <label id="message" name="contact_us[email]" type="text" class="contents">Message</label>
+                    <textarea  id="contact_us_message" name="message" rows="" cols="" class="text_box"></textarea>
+                </p>
+                <ul class="ul-error-list message_required" style="display:none;">
+                    <li>
+                        This Value is required.
+                    </li>
+                </ul>
+                <p>
+                    <input id="detail_submit" class="button" value="send" type="button" style="font-size: 1.200em;">
+                </p>
+            </form>
+        </div>
+        <div id="overlay" class="loading-overlay close-modal" style="display: none;"></div>
+        <div class="notifications" id="notifications" style="display: none;">
+            <div class="notification-close close-modal"></div>
+            <h3 class="notification notification-success ">
+                <div class="image_logo">
+
+                </div>
+                <%= "Thanks For Contacting Us" %>
+            </h3>
+            <h6>We'll reply as soon as possible.</h6>
+            <a href="#" class="button close-modal" style="width:21%;">Close</a>
+        </div>
+    </div>
+
+
+    <div class="contact-us-info-section">
+        <h4>Pescara</h4>
+        <p style="line-height: 2em;">
+            <a target="blank" href="tel:+3908551500">(+39) 085 51500</a>
+            <a target="blank" href="https://goo.gl/maps/Pogvy">Via Cetteo Ciglia, 70</a>
+            <a target="blank" href="https://goo.gl/maps/Pogvy">65128 Pescara, Italy</a>
+        </p>
+        <h4>Latina</h4>
+        <p style="line-height: 2em;">
+            <a target="blank" href="tel:+390773602361">(+39) 0773 602361</a>
+            <a target="blank" href="//goo.gl/Rggbdk">Via Ufente, 20</a>
+            <a target="blank" href="//goo.gl/Rggbdk">04100 Latina, Italy</a>
+        </p>
+        <h4>Email</h4>
+        <p>
+            <a target="blank" href="">admin email</a>
+        </p>
+        <ul class="icons social-networks">
+            <li>
+                <a target="blank" href="">
+                    <img src="images/twit_new.png" style="width: 15%">
+                </a>
+            </li>
+            <li>
+                <a target="blank" href="">
+                    <img src="images/git_new.png" style="width: 15%">
+                </a>
+            </li>
+            <li>
+                <a target="blank" href="">
+                    <img src="images/fb_new.png" style="width: 15%">
+                </a>
+            </li>
+            <li>
+                <a target="blank" href="">
+                    <img src="images/instagram.png" style="width: 15%">
+                </a>
+            </li>
+            <li>
+                <a target="blank" href="">
+                    <img src="images/ln_new.png" style="width: 15%">
+                </a>
+            </li>
+        </ul>
+    </div>
