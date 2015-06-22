@@ -38,4 +38,23 @@ spreeMarket.config(['$routeProvider',
         otherwise({
           redirectTo: '/home'
         });
-  }]);
+  }]).directive("landingPage",['$log',function($log){
+    return{
+        restrict:'E',
+        replace:true,
+        transclude:true,
+        controller : ["$scope",function($scope){
+
+
+        }],
+        templateUrl:'partials/generic/landingPage.html',
+        link:function(scope,element,attribute){
+            scope.navBar = true;
+            scope.navTemplate = "partials/generic/navBar.html";
+            scope.footerTemplate = "partials/generic/footer.html";
+            scope.$on("navBarListener",function(event,hideNavBar){
+                scope.navBar = hideNavBar;
+            });
+        }
+    }
+}]);
