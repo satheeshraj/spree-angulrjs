@@ -263,7 +263,27 @@
   z-index: 1000;
 
 }
-
+.ruby-icon {
+  background: url("../img/ruby.png") no-repeat top left;
+  background-image: url("../img/ruby_svg.svg"),none;
+  background-size: contain;
+}
+.ppc-icon {
+  background: url("../img/ppc.png") no-repeat top left;
+  background-image: url("../img/ppc_svg.svg"), none;
+}
+.seo-icon {
+  background: url("../img/seo.png") no-repeat top left;
+  background-image: url("../img/seo_svg.svg"),none;
+}
+.social_media-icon {
+  background: url("../img/seo.png") no-repeat top left;
+  background-image: url("../img/social_media_svg.svg"),none;
+}
+.email_marketing-icon {
+  background: url("../img/email_marketing.png") no-repeat top left;
+  background-image: url("../img/email_marketing_svg.svg"), none;
+}
 @media only screen and (max-width: 768px) {
   .nav_float{
     float:none !important;
@@ -302,6 +322,22 @@
   .ember-icon {
     background: url("../img/ember.png") no-repeat top ;
     background-image: url("../img/ember_svg.svg"),none;
+  }
+  .ppc-icon {
+    background: url("../img/ppc.png") no-repeat top;
+    background-image: url("../img/ppc_svg.svg"), none;
+  }
+  .seo-icon {
+    background: url("../img/seo.png") no-repeat top;
+    background-image: url("../img/seo_svg.svg"),none;
+  }
+  .social_media-icon {
+    background: url("../img/seo.png") no-repeat top;
+    background-image: url("../img/social_media_svg.svg"),none;
+  }
+  .email_marketing-icon {
+    background: url("../img/email_marketing.png") no-repeat top;
+    background-image: url("../img/email_marketing_svg.svg"), none;
   }
 }
 
