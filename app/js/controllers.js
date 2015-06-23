@@ -11,6 +11,7 @@ spreeMarket.controller('MainCtrl',['$scope','$log','$controller',function($scope
     $scope.$emit("navBarListener",true);
 
     $( document ).ready(function() {
+
         $("#id2").hide();
         $("#id4").hide();
         $("#id6").hide();
@@ -25,8 +26,13 @@ spreeMarket.controller('MainCtrl',['$scope','$log','$controller',function($scope
         }).mouseout(function(){
             $(this).removeClass('mouse_on')
         });
+
     });
 
+    $('.back-to-top').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
 
     $scope.smOver = function(e){
         $("#id1").show();
@@ -62,38 +68,37 @@ spreeMarket.controller('MainCtrl',['$scope','$log','$controller',function($scope
     $(window).scroll(function(){
         var window_top = $(window).scrollTop();
         if(window_top != 0){
-            $('#nav').css({'background-color': 'black','border-color':'black'})
+            $('#nav').css({'background-color': 'black','border-color':'black'});
+            $('#backToTop').addClass('back-to-top').fadeIn();
         }else{
             $('#nav').scrollTop(function(){
+                $('#backToTop').removeClass('back-to-top').fadeOut();
                 $(this).css({'background-color': 'transparent','border-color':'transparent'})
             })
-
         }
     });
 
 }]);
 
-spreeMarket.controller('WorkCtrl',['$scope','$log',function($scope,$log){
+spreeMarket.controller('WorkCtrl',['$scope','$log','$controller',function($scope,$log,$controller){
+
+    $log.debug("WorkCtrl");
+
+    $controller("MainCtrl",{$scope:$scope});
 
     $scope.$emit("navBarListener",true);
-    $log.debug("WorkCtrl");
-    $(window).scroll(function(){
-        var window_top = $(window).scrollTop();
-        if(window_top != 0){
-            $('#nav').css({'background-color': 'black','border-color':'black'})
-        }else{
-            $('#nav').scrollTop(function(){
-                $(this).css({'background-color': 'transparent','border-color':'transparent'})
-            })
-
-        }
-    });
-
+    //$('.back-to-top').click(function(){
+    //    $('html, body').animate({scrollTop : 0},800);
+    //    return false;
+    //});
 }]);
 
-spreeMarket.controller('AboutCtrl',['$scope','$log',function($scope,$log){
+spreeMarket.controller('AboutCtrl',['$scope','$log','$controller',function($scope,$log,$controller){
 
 $log.debug("abourctrl");
+
+    $controller("MainCtrl",{$scope:$scope});
+
     $scope.$emit("navBarListener",true);
     $("#button_2").mouseover(function(){
         $(this).addClass('mouse_on_about')
@@ -101,46 +106,39 @@ $log.debug("abourctrl");
         $(this).removeClass('mouse_on_about')
     });
 
-    $(window).scroll(function(){
-        var window_top = $(window).scrollTop();
-        if(window_top != 0){
-            $('#nav').css({'background-color': 'black','border-color':'black'})
-        }else{
-            $('#nav').scrollTop(function(){
-                $(this).css({'background-color': 'transparent','border-color':'transparent'})
-            })
-
-        }
-    });
 
 }]);
 
-spreeMarket.controller('BlogCtrl',['$scope','$log',function($scope,$log){
+spreeMarket.controller('BlogCtrl',['$scope','$log','$controller',function($scope,$log,$controller){
 
     $log.debug("BlogCtrl");
 
+    $controller("MainCtrl",{$scope:$scope});
+
     $scope.$emit("navBarListener",false);
 
+
+
 }]);
-spreeMarket.controller('ServicesCtrl',['$scope','$log',function($scope,$log){
+spreeMarket.controller('ServicesCtrl',['$scope','$log','$controller',function($scope,$log,$controller){
 
     $log.debug("ServicesCtrl");
+
+    $controller("MainCtrl",{$scope:$scope});
+
     $scope.$emit("navBarListener",true);
+
 
 }]);
 
-spreeMarket.controller('ContactCtrl',['$scope','$log',function($scope,$log){
+spreeMarket.controller('ContactCtrl',['$scope','$log','$controller',function($scope,$log,$controller){
     $log.debug("ContactCtrl");
-    $scope.$emit("navBarListener",true);
-    $(window).scroll(function(){
-        var window_top = $(window).scrollTop();
-        if(window_top != 0){
-            $('#nav').css({'background-color': 'black','border-color':'black'})
-        }else{
-            $('#nav').scrollTop(function(){
-                $(this).css({'background-color': 'black','border-color':'black'})
-            })
 
-        }
-    });
+    $controller("MainCtrl",{$scope:$scope});
+
+    $scope.$emit("navBarListener",true);
+
+
+
+
 }]);

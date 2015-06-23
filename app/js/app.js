@@ -6,6 +6,7 @@ var spreeMarket = angular.module('spreeMarket', [
   'spreeMarketController',
   'ngRoute',
   'spreeMarketDirectives'
+
 ]);
 
 spreeMarket.config(['$routeProvider',
