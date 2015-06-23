@@ -111,6 +111,12 @@
   margin: 0
 }
 
+.brand{
+  background : url("../img/step0006.png") no-repeat;
+  background-size: 100%;
+  width: 54px;
+}
+
 .back-to-top{
   position: fixed;
   bottom: 40px;
